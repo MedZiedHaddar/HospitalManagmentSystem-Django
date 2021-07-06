@@ -1,0 +1,195 @@
+{% include 'include.html' %}
+{% include 'navbar.html' %}
+{% block body %}
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Hospital Managment System</title>
+    <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static '/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/back-to-top-scroll-1.css' %}">
+    <link rel="stylesheet" href="{% static '/css/back-to-top-scroll.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Bold-BS4-Animated-Back-To-Top.css' %}">
+    <link rel="stylesheet" href="{% static '/css/cards.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{% static '/css/Login-Form-Dark.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Pretty-Registration-Form.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Sidebar-Menu-1.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Sidebar-Menu.css' %}">
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+ 
+
+
+</head>
+<body style="background-color:  #F0F0F0">
+    
+   
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static "img/centre.jpg" %}" style="height:570px; width:500px;" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static "img/recep.jpg" %}" style="height:570px; width:500px;" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static "img/team.jpg" %}" style="height:570px; width:500px;"alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<br><br>
+      <div class="form-row">
+    <div class="col  mr-5">
+    <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+    <p>20
+    <br> Total Médecins
+    <img src="{% static '/img/growth.png' %}" width="50px" height="50px"  align="right">
+    </p>
+    
+         
+                </div>
+                </div>
+                </div>
+    </div> 
+    <div class="col  mr-5">
+    <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+    <p>250
+    <br> Total Patients
+      <img src="{% static '/img/growth.png' %}" width="50px" height="50px"  align="right">
+    </p>
+                </div>
+                </div>
+                </div>
+    </div>
+    </div>
+    <div class="general-area-home">
+          
+           <h2 style="color:#0040ff">Pourquoi Nous Choisir ?</h2><br> 
+           </div>
+<div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="form-row">
+    <div class="col-md-6 ">
+      <h3> Service Qualité</h3>
+    </div>
+      <div class="col-md-6 ">
+    <h3> L’équipe</h3>
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="col-md-1 ">
+  
+       <img src="{% static '/img/customer-support.png' %}" width="80px" height="80px" >
+      </div>
+         <div class="col-md-5">
+  Le Centre Médical Ibn Khaldoun s’est engagé dans une démarche qualité dont l’objectif est l’amélioration continue des prestations de services fournies à ses patients.
+       
+    </div>
+   
+      <div class="col-md-1">
+    
+      <img src="{% static '/img/teamwork.png' %}" width="80px" height="80px" >
+      </div>
+         <div class="col-md-5 ">
+      Une équipe multidisciplinaire d’une grande compétence, interactive et formée aux bonnes pratiques professionnelles.
+   
+    </div>
+</div>
+     <div class="form-row">
+    <div class="col-md-6">
+    <h3> Equipements</h3>
+    </div>
+ <div class="col-md-6">
+  <h3> Toujours à L’écoute</h3>
+    </div>
+    <div>
+<div class="form-row">
+     <div class="col-md-1">
+    <img src="{% static '/img/support.png' %}" width="80px" height="80px" >
+    </div>
+         <div class="col-md-5">
+  le premier et le seul centre disposant de la panoplie d’appareils indispensables pour votre prise en charge.
+        </div>
+   
+         <div class="col-md-1">
+     <img src="{% static '/img/ear.png' %}" width="80px" height="80px" >
+     </div>
+          <div class="col-md-5">
+     Toujours à l’écoute de nos patients, nous nous adaptons à leurs besoins pour mieux les accompagner dans leurs traitements.
+      </div>
+  </div>
+
+     <div class="form-row">
+        <div class="col-md-6">
+    <h3> Techniques de pointe</h3>
+    </div>     <div class="col-md-6">
+   <h3> Dossier médical informatisé</h3>
+    </div>
+     <div class="col-md-1">
+    <img src="{% static '/img/electronic-book.png' %}" width="80px" height="80px" >
+    </div>
+         <div class="col-md-5">
+ Disposant d’équipements, à la pointe de la technologie, le Centre Médical Ibn Khaldoun a participé à l’instauration en Tunisie de nouvelles techniques de traitement ; tel que la radiothérapie VMAT, la radiothérapie Stéréotaxiques, l’utilisation des faisceaux FFF (Flattening Filter-Free)…              
+    </div>
+        <div class="col-md-1">
+ 
+    <img src="{% static '/img/book1.png' %}" width="80px" height="80px" >
+    </div>
+         <div class="col-md-5">
+   Votre Dossier médical est informatisé, offrant ainsi une grande sécurité et une accessibilité à l’ensemble des acteurs de votre Prise En Charge.
+   </div>
+  </div>
+              
+                  </div>
+                  </div>
+                  </div>
+</div>
+<footer class="bg-primary text-white text-center text-lg-start  w-100 " >
+  <div class="text-center p-3">
+       <p > Avenue de la liberté , 4011 Hammam Sousse - Tunisie  TEL : 00216 71 250 650  E-mail : contact@cmik.com</p>
+    
+    © 2021 Copyright CMIK Tous droits réservés
+  </div>
+  <!-- Copyright -->
+</footer>
+ 
+
+
+    <script src="{% static '/js/jquery.min.js' %}"></script>
+    <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/back-to-top-scroll.js' %}"></script>
+    <script src="{% static '/js/Bold-BS4-Animated-Back-To-Top.js' %}"></script>
+    <script src="{% static '/js/bs-init.js' %}"></script>
+    <script src="{% static '/js/Sidebar-Menu.js' %}"></script>
+    
+   
+</body>
+<section class="general-area-home">
+       
+</section>
+{% endblock %}

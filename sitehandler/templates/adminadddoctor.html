@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include 'include.html' %}
+    {% load static %}
+</head>
+
+<body style="background-image: url(&quot;{% static 'img/star-sky.jpg' %}&quot;);">
+    
+    {% include 'adminnav.html' %}
+    <div id="wrapper">
+        {% include 'admin_include.html' %}
+        <div class="page-content-wrapper">
+            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars" style="color: white;"></i></a>
+                <div class="row register-form">
+                    <div class="col-md-8 offset-md-2">
+                        <form class="custom-form" method="post" style="margin-top: 0px;background-color: rgba(0,0,0,0.05);">
+                            {% csrf_token %}
+                            <h1 style="color: white;">Ajouter Docteur</h1>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="name-input-field" style="color: rgb(255,255,255);">Nom </label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input class="form-control" type="text" name="name">
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="email-input-field" style="color: rgb(255,255,255);">E-mail </label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input class="form-control" type="email" name="email">
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="pawssword-input-field" style="color: rgb(255,255,255);">Mot de passe </label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input class="form-control" type="password" name="password">
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="repeat-pawssword-input-field" style="color: rgb(255,255,255);">Retaper Mot de passe </label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input class="form-control" type="password" name="repeatpasssword">
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="name-input-field" style="color: rgb(255,255,255);">Genre</label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <select class="form-control" name="gender">
+                                        <optgroup label="Choose Your Gender">
+                                            <option value="Male" selected="">Male</option>
+                                            <option value="Female">Female</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="name-input-field" style="color: rgb(255,255,255);">Numéro de Téléphone</label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input class="form-control" type="text" name="phonenumber">
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="name-input-field" style="color: rgb(255,255,255);">Addresse</label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <textarea class="form-control" name="address"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="name-input-field" style="color: rgb(255,255,255);">Date de naissance</label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <input class="form-control" type="date" name="dateofbirth">
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="name-input-field" style="color: rgb(255,255,255);">Type du Sang</label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <select class="form-control" name="bloodgroup">
+                                        <optgroup label="Choose Blood Group">
+                                            <option value="O+" selected="">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row form-group">
+                                <div class="col-sm-4 label-column">
+                                    <label class="col-form-label" for="name-input-field" style="color: rgb(255,255,255);">Spécialité</label>
+                                </div>
+                                <div class="col-sm-6 input-column">
+                                    <select class="form-control" name="specialization">
+                                        <optgroup label="Choisir votre Spécialité">
+                                            <option value="Pediatrician" selected="">Pediatre</option>
+                                            <option value="Gynecologist">Gynecologue</option>
+                                            <option value="Surgeon">Chirurgien</option>
+                                            <option value="Psychiatrist">Psychiatre</option>
+                                            <option value="Cardiologist">Cardiologue</option>
+                                            <option value="Dermatologist">Dermatologue</option>
+                                            <option value="Endocrinologist">Diabétologue</option>
+                                            
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        <button class="btn btn-primary submit-button" type="submit">Ajouter Docteur</button></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-top-wrapper"><span class="scroll-top-inner"><i class="fa fa-arrow-circle-up"></i></span></div>
+{% ifequal error "no" %}
+<script type="text/javascript">
+    alert('Doctor saved Sucessfully..........')
+    window.location = ('{% url 'adminaddDoctor' %}')
+</script>
+{% endifequal%}
+
+{% ifequal error "yes" %}
+<script type="text/javascript">
+    /*alert('{{e}}')*/
+    alert('Email already exists....')
+</script>
+{% endifequal%}
+    <div class="scroll-top-wrapper"><span class="scroll-top-inner"><i class="fa fa-arrow-circle-up"></i></span></div>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/back-to-top-scroll.js' %}"></script>
+<script src="{% static 'js/Bold-BS4-Animated-Back-To-Top.js' %}"></script>
+<script src="{% static 'js/bs-init.js' %}"></script>
+<script src="{% static 'js/Sidebar-Menu.js' %}"></script>
+</body>
+
+</html>
